@@ -5,5 +5,8 @@
     "express-session": "^1.18.2",
     "pg": "^8.16.3",
     "pug": "^3.0.3"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
