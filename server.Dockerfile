@@ -2,7 +2,8 @@
 FROM node:24
 
 # Set the working directory
-WORKDIR /
+WORKDIR /usr/app
+COPY ./ /usr/app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -18,14 +19,6 @@ EXPOSE 3000
 
 CMD ["npm", "start"]
 
-# express
-# cors
-# pg
-# express-session
-# pug
-
-# `docker build -t sample_hotel_app .`
-# [+] Building 0.0s (1/1) FINISHED                                  docker:desktop-linux
-#  => [internal] load build definition from Dockerfile                              0.0s
-#  => => transferring dockerfile: 2B                                                0.0s
-# ERROR: failed to build: failed to solve: failed to read dockerfile: open Dockerfile: no such file or directory
+# Building: docker build -f server.Dockerfile -t sample_hotel_app .
+# Running: docker run -p 3000:3000 sample_hotel_app
+# Open: http://localhost:3000/

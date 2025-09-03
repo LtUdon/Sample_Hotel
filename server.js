@@ -6,7 +6,7 @@ const cors = require('cors');
 const { Pool } = require('pg');
 
 const port = 3000;
-const address = 'localhost';
+const address = '0.0.0.0';
 
 const app = express();
 exports.app = app;
